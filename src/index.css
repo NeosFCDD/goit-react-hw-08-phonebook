@@ -49,13 +49,6 @@ button {
   cursor: pointer;
 }
 
-.App {
-  width: 300px;
-  padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  border: #5067ee;
+a {
+  text-decoration: none;
 }
