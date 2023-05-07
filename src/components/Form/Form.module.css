@@ -1,8 +1,26 @@
 .form {
         margin-top: 30px;
         margin-bottom: 30px;
-      }
-      
+}
+
+.container-contacts {
+        display: inline-flex;
+        flex-direction: column;
+        width: 350px;
+}
+
+.container-list-contacts {
+        display: flex;
+        flex-direction: column;
+        min-width: 350px;
+}
+
+.container-filter {
+        display: inline-flex;
+        flex-direction: column;
+        width: 350px;
+}
+
 .input {
         display: block;
         margin-top: 20px;
@@ -11,6 +29,7 @@
         width: 270px;
         height: 25px;
         border-radius: 25px;
+        border: 1px solid #555;
 }
       
 .item {
@@ -28,17 +47,19 @@
 }
       
 .button {
-        background-color: #6580f8;
-        border-radius: 25px;
-        border: transparent;
-        padding: 5px 10px;
-        font-size: 20px;
-        box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2.6px;
+        margin-top: 10px;
+        padding: 10px;
+        text-align: center;
+        color: #ffffff;
+        background-color: #1f99fd;
+        border-color: transparent;
+        border-radius: 16px;
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
       
 .button:hover {
         box-shadow: none;
-        background-color: #e4fd74;
+        background-color: #119281;
 }
 
 .deletebutton {
@@ -52,3 +73,4 @@
         text-align: center;
         padding-top: 70px;
 }
+

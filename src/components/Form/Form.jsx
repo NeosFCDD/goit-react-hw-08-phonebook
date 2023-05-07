@@ -5,18 +5,20 @@ import { fetchContacts } from "components/Redux/fetchContacts";
 import { getContacts } from "components/Redux/selectors";
 import { addContact } from "components/Redux/addContacts";
 import { Notify } from "notiflix/build/notiflix-notify-aio";
+import { getIsLoggedIn } from "components/Redux/selectors";
 
 
 export default function Form () {
   const dispatch = useDispatch();
   const contacts = useSelector(getContacts);
+  const isLoggedIn = useSelector(getIsLoggedIn);
 
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
   useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
+    isLoggedIn && dispatch(fetchContacts());
+  }, [dispatch, isLoggedIn]);
   
   
   const handleChange = (e) => {
@@ -54,7 +56,7 @@ export default function Form () {
   };
 
   return (
-      <>
+      <div className={css["container-contacts"]}>
           <h1>Phonebook</h1>
           <form className={css.form} onSubmit={handleState}>
             <label>
@@ -87,6 +89,6 @@ export default function Form () {
               Add contact
             </button>
           </form>
-       </>
+       </div>
   );
 }

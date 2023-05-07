@@ -2,7 +2,7 @@ import css from "components/Home/Home.module.css";
 
 const Home = () => {
         return (
-          <div>
+          <div className={css.homebox}>
             <h1 className={css.homename}>Welcome to your personal Phonebook. Login and enjoy!</h1>
           </div>
         );

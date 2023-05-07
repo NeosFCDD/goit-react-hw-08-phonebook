@@ -30,7 +30,7 @@ const Contacts = () => {
   return contacts.length === 0 && isLoading && !error ? (
     <Loader />
    ) : (
-    <>
+    <div className={css["container-list-contacts"]}>
       <ul className={css.list}>
         {filteredContacts.map(({ id, name, number }) => (
           <li key={id} className={css.item}>
@@ -47,7 +47,7 @@ const Contacts = () => {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 

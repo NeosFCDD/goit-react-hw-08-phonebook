@@ -15,7 +15,7 @@ const Filter = () => {
 
 
   return (
-    <>  
+    <div className={css["container-filter"]}>  
         <h2>Contacts</h2>
         <label>
           Find contact name
@@ -27,7 +27,7 @@ const Filter = () => {
             onChange={filterContacts}
           />
         </label>
-    </> 
+    </div> 
   );
 };
 

@@ -1,20 +1,74 @@
 .container {
         padding: 0 50px;
+        
 }
       
  .navbox{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        border-bottom: 1px solid #1f99fd;
 }
-      
+
+.navbox a {
+        padding: 10px 20px;
+        display: block;
+        font-weight: 500;
+        color: #f8f9ff;
+        background-color: #1f99fd;
+        border-radius: 35px;
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 .navlist {
         display: flex;
-        flex-direction: row;
+        align-items: center;
+}
 
+.navlist a {
+        margin-right: 10px;
 }
 
 .navitem{
         margin: 10px;
         color: black;
+}
+
+a.register {
+        background-color: #2b9e5f;
+        color: #ffffff;
+        margin-left: 8px;
+}
+
+.auth-menu {
+        display: flex;
+ }
+      
+.username {
+        font-weight: 700;
+        color: #1f99fd;
+ }
+      
+.usermenu {
+        display: flex;
+        align-items: center;
+}
+      
+.btn-logout {
+        margin-left: 15px;
+        padding: 10px 20px;
+        text-align: center;
+        color: #ffffff;
+        background-color: #1f99fd;
+        border-color: transparent;
+        border-radius: 16px;
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+      
+.btn-logout:hover {
+        background-color: #119281;
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        color: #ffffff;
 }

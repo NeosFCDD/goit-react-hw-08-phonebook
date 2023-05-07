@@ -5,7 +5,7 @@ const AuthMenu = () => {
   return (
     <ul className={css.navlist}>
       <li className={css.navitem}>
-        <Link to="/register">Register</Link>
+        <Link className={css.register} to="/register">Register</Link>
       </li>
       <li className={css.navitem}>
         <Link to="/login">Login</Link>
