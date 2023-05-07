@@ -18,9 +18,11 @@ const Navigation = () => {
             <li className={css.navitem}>
                 <Link to="/">Home</Link>
             </li>
-            <li className={css.navitem}>
+            {isLoggedIn && (
+              <li>
                 <Link to="/contacts">Contacts</Link>
-            </li>
+              </li>
+            )}
           </ul>
           {isLoggedIn ? <UserMenu /> : <AuthMenu />}
         </nav>
