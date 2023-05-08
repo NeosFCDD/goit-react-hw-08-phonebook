@@ -10,6 +10,8 @@ import Loader from "./Form/Loader";
 import NotFound from "pages/NotFound/NotFound";
 import { fetchCurrentUser } from "./Redux/authOperations";
 import { getIsRefreshing } from "components/Redux/selectors";
+import PublicRoute from "./PublicRoute";
+import PrivateRoute from "./PrivateRoute";
 
 function App ( ){
   const dispatch = useDispatch();
@@ -24,9 +26,12 @@ function App ( ){
           <Routes>
             <Route path="/" element={<Navigation />}>
                 <Route index element={<Home />} />
-                <Route path="contacts" element={<Phonebook />} />
-                <Route path="login" element={<Login />} />
-                <Route path="register" element={<Register />} />
+                <Route path="contacts" element={
+                  <PrivateRoute component={Phonebook} redirectTo="/login" />} />
+                <Route path="login" element={
+                  <PublicRoute component={Login} redirectTo="/contacts" />} />
+                <Route path="register" element={
+                  <PublicRoute component={Register} redirectTo="/contacts" />} />
                 <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
